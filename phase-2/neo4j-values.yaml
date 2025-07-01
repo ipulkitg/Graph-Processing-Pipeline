@@ -1,0 +1,18 @@
+neo4j:
+  name: neo4j
+  edition: community
+  password: project1phase2
+
+volumes:
+  data:
+    mode: defaultStorageClass
+
+env:
+  NEO4J_PLUGINS: '["graph-data-science"]'
+
+config:
+  dbms.security.procedures.unrestricted: "gds.,apoc.,gds.util.*"
+
+resources:
+  cpu: "1000m"
+  memory: "2Gi"
